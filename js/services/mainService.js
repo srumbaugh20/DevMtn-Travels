@@ -15,6 +15,7 @@ angular.module('devmtnTravel').service('mainSrv', function(){
         desc: "Australia is a country and continent surrounded by the Indian and Pacific oceans. Its major cities – Sydney, Brisbane, Melbourne, Perth, Adelaide – are coastal. Its capital, Canberra, is inland. ",
         price: 1112
     }];
+
 		this.packageInfo = [{
 				city: "Bordeaux",
 				country: "France",
@@ -80,4 +81,17 @@ angular.module('devmtnTravel').service('mainSrv', function(){
 				price: 1722.12
 			},
 		]
+
+    this.bookedTrip = function (id){
+        var match;
+        console.log(id);
+      for (var i = 0; i <this.packageInfo.length; i++){
+        console.log(this.packageInfo[i].city);
+        if (this.packageInfo[i].city === id){
+          match = this.packageInfo[i]
+        }
+      }
+      return match;
+    }
+
 })
